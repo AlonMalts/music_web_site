@@ -1,22 +1,26 @@
 import React from "react";
 import "./WorkScreen.css";
 
-const WorkScreen = () => {
+const WorkScreen = ({ selectedCategory }) => {
+  const renderContent = () => {
+    switch (selectedCategory) {
+      case "Releases":
+        return <p>Here are your music releases.</p>;
+      case "Videos":
+        return <p>Watch your music videos here.</p>;
+      case "About":
+        return <p>Learn more about the artist here.</p>;
+      case "Features":
+        return <p>Explore user library management features.</p>;
+      default:
+        return <p>Select a category to see the content.</p>;
+    }
+  };
+
   return (
     <main className="workscreen">
-      <h2>Work Screen</h2>
-      <div id="releases">
-        <h3>My Releases</h3>
-        <p>List of releases will go here...</p>
-      </div>
-      <div id="videos">
-        <h3>My Videos</h3>
-        <p>List of videos will go here...</p>
-      </div>
-      <div id="features">
-        <h3>Features</h3>
-        <p>User library management app will go here...</p>
-      </div>
+      <h2>{selectedCategory}</h2>
+      <div>{renderContent()}</div>
     </main>
   );
 };

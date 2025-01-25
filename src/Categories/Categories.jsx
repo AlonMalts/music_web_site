@@ -1,17 +1,21 @@
 import React from "react";
 import "./Categories.css";
 
-const Categories = () => {
+const Categories = ({ onCategoryChange }) => {
+  const categories = ["Releases", "Videos", "About", "Features"];
+
   return (
-    <section className="categories">
-      <h2>Categories</h2>
-      <nav>
-        <a href="#releases">Releases</a>
-        <a href="#videos">Videos</a>
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-      </nav>
-    </section>
+    <div className="categories">
+        {categories.map((category) => (
+          <button
+            key={category}
+            className="category-button"
+            onClick={() => onCategoryChange(category)}
+          >
+            {category}
+          </button>
+        ))}
+    </div>
   );
 };
 
