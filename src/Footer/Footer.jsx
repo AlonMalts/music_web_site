@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
-    return (
-      <footer className="bg-gray-800 text-white p-4 text-center">
-        <p>&copy; 2025 Music Web Site</p>
-      </footer>
-    );
-  };
+  return (
+    <footer className="footer">
+      <p>&copy; 2025 Music Web Site</p>
+    </footer>
+  );
+};
 
-  export default Footer;
+export default Footer;
