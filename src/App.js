@@ -1,5 +1,5 @@
 import './App.css';
-import MusicWebSite from "./MusicWebSite/MusicWebSite"
+import MusicWebSite from "../src/Components/MusicWebSite/MusicWebSite"
 
 function App() {
   return (

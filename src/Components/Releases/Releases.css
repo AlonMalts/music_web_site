@@ -1,0 +1,16 @@
+.releases {
+    padding: 20px;
+  }
+  
+  .release-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .audio-player {
+    margin-top: 20px;
+  }

@@ -6,6 +6,7 @@ const WorkScreen = ({ selectedCategory }) => {
   const renderContent = () => {
     switch (selectedCategory) {
       case "Releases":
+        //return <p>sdsasdasd</p>
         return <Releases/>;
       case "Videos":
         return <p>Watch your music videos here.</p>;
