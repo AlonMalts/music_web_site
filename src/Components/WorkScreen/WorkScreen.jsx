@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./WorkScreen.css";
+import Releases from "../Releases/Releases";
 
 const WorkScreen = ({ selectedCategory }) => {
   const renderContent = () => {
     switch (selectedCategory) {
       case "Releases":
-        return <p>Here are your music releases.</p>;
+        return <Releases/>;
       case "Videos":
         return <p>Watch your music videos here.</p>;
       case "About":
