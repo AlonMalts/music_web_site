@@ -40,15 +40,6 @@ const Releases = () => {
     setCurrentSong(downloadLink); // Устанавливаем ссылку для аудио
   };
 
-  const downloadFile = (filePath) => {
-    const downloadLink = getDownloadLink(filePath);
-    const link = document.createElement("a");
-    link.href = downloadLink;
-    link.download = "song.mp3"; // Указываем имя для сохранения
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <div>
@@ -61,7 +52,6 @@ const Releases = () => {
             <li key={release.id}>
               {release.title} by {release.artist}{" "}
               <button onClick={() => playSong(release.filePath)}>Play</button>
-              <button onClick={() => downloadFile(release.filePath)}>Download</button>
             </li>
           ))}
         </ul>
@@ -70,7 +60,7 @@ const Releases = () => {
         <div>
           <h4>Now Playing:</h4>
           <audio controls autoPlay>
-            <source src="https://drive.google.com/uc?export=download&id=1PPb9-2ihtNJKBE0f4QlUC7sy6BmtCN3V" type="audio/mp3" />
+            <source src={currentSong} type="audio/mp3" />
             Your browser does not support the audio element.
           </audio>
         </div>
