@@ -1,11 +1,17 @@
 .footer {
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .footer p {
-    margin: 0;
-    font-size: 0.9rem;
-  }
+  background-color: #111;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer .social-links a {
+  color: #1e3a8a;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer .social-links a:hover {
+  text-decoration: underline;
+}
