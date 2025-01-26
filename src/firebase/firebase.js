@@ -3,12 +3,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Firebase config
 const firebaseConfig = {
-  apiKey: "your-api-key",
-  authDomain: "your-auth-domain",
-  projectId: "your-project-id",
-  storageBucket: "your-storage-bucket",
-  messagingSenderId: "your-messaging-sender-id",
-  appId: "your-app-id",
+    apiKey: "AIzaSyBvFAyg1BLM6Kb0NiXYqrgePf4VcVNGhzE",
+    authDomain: "music-web-site-4b3ff.firebaseapp.com",
+    projectId: "music-web-site-4b3ff",
+    storageBucket: "music-web-site-4b3ff.firebasestorage.app",
+    messagingSenderId: "845490129669",
+    appId: "1:845490129669:web:6a35bfcde9494e49df456c"
 };
 
 // Initialize Firebase
