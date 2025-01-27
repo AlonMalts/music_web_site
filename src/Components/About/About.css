@@ -1,0 +1,47 @@
+.about {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .bio-section, .summary-section, .links-section {
+    margin-bottom: 20px;
+  }
+  
+  .bio-section p, .summary-section ul, .links-section ul {
+    margin: 10px 0;
+  }
+  
+  .summary-section ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .links-section ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+  
+  .links-section li {
+    margin: 5px 0;
+  }
+  
+  .links-section a {
+    color: #0073e6;
+    text-decoration: none;
+  }
+  
+  .links-section a:hover {
+    text-decoration: underline;
+  }
+  
