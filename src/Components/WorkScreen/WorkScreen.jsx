@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./WorkScreen.css";
 import Releases from "../Releases/Releases";
 import About from "../About/About";
