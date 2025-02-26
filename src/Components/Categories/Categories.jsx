@@ -2,7 +2,7 @@ import React from "react";
 import "./Categories.css";
 
 const Categories = ({ onCategoryChange }) => {
-  const categories = ["Releases", "Videos", "About", "Features"];
+  const categories = ["Releases", "Videos", "About", "Features","Lessons"];
 
   return (
     <div className="categories">
