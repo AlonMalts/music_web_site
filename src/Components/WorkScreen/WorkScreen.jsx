@@ -4,6 +4,7 @@ import Home from "../Home/Home";
 import Releases from "../Releases/Releases";
 import About from "../About/About";
 import Lessons from "../Lessons/Lessons";
+import MusicVideos from "../MusicVideos/MusicVideos";
 
 const WorkScreen = ({ selectedCategory }) => {
   const renderContent = () => {
@@ -13,7 +14,7 @@ const WorkScreen = ({ selectedCategory }) => {
       case "Music library":
         return <Releases />;
       case "Music videos":
-        return <p>Watch your music videos here.</p>;
+        return <MusicVideos />;
       case "Music Lessons":
         return <Lessons />;
       case "About":
