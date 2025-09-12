@@ -5,3 +5,13 @@
   text-align: center;
   font-size: 24px;
 }
+
+.logo {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  margin: 0;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}

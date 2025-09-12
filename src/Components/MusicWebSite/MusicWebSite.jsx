@@ -6,7 +6,7 @@ import Footer from "../Footer/Footer";
 import "./MusicWebSite.css";
 
 const MusicWebSite = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Releases");
+  const [selectedCategory, setSelectedCategory] = useState("Home");
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
@@ -14,7 +14,7 @@ const MusicWebSite = () => {
 
   return (
     <div className="music-website">
-      <Header />
+      <Header onCategoryChange={handleCategoryChange} />
       <Categories onCategoryChange={handleCategoryChange} />
       <WorkScreen selectedCategory={selectedCategory} />
       <Footer />
