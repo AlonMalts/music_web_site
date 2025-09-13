@@ -94,7 +94,7 @@ const Releases = () => {
       <div className="library-container">
         {/* Personal Releases Column */}
         <div className="library-column">
-          <h3>🎵 My Personal Releases</h3>
+          <h3>🎵 My Releases</h3>
           <div className="releases-section">
             {personalReleases.length === 0 ? (
               <div className="empty-state">
@@ -186,7 +186,7 @@ const Releases = () => {
 
         {/* Favorite Playlists Column */}
         <div className="library-column">
-          <h3>🎶 My Favorite Playlists</h3>
+          <h3>🎶 My Playlists</h3>
           <div className="playlists-section">
             {favoritePlaylists.length === 0 ? (
               <div className="empty-state">

@@ -11,7 +11,7 @@ const Header = ({ onCategoryChange }) => {
   return (
     <header className="header">
       <h1 className="logo" onClick={handleLogoClick}>
-        Music Web Site
+        Alon Malts Music
       </h1>
     </header>
   );
