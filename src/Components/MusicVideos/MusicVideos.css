@@ -1,9 +1,11 @@
 .music-videos {
-  padding: 20px;
+  padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
   background-color: #000000;
   color: #ffffff;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .music-videos h2 {
