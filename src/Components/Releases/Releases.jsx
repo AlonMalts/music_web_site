@@ -10,6 +10,18 @@ const Releases = () => {
   const [playingSongId, setPlayingSongId] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
+  // Default playlists including the user's Spotify playlist
+  const defaultPlaylists = [
+    {
+      id: "chill-dnd",
+      name: "Chill dnd",
+      platform: "Spotify",
+      description: "A relaxing playlist perfect for D&D sessions and chill moments",
+      trackCount: "12 tracks",
+      url: "https://open.spotify.com/playlist/1X4KVtzbCksJXdfE3ziOL9?si=579624e39b46481d"
+    }
+  ];
+
   useEffect(() => {
     const fetchPersonalReleases = async () => {
       try {
@@ -188,20 +200,20 @@ const Releases = () => {
         <div className="library-column">
           <h3>🎶 My Playlists</h3>
           <div className="playlists-section">
-            {favoritePlaylists.length === 0 ? (
+            {[...defaultPlaylists, ...favoritePlaylists].length === 0 ? (
               <div className="empty-state">
                 <p>No favorite playlists added yet.</p>
                 <p className="help-text">Add your favorite playlists from Spotify, Apple Music, etc.</p>
               </div>
             ) : (
               <div className="playlists-list">
-                {favoritePlaylists.map((playlist) => (
+                {[...defaultPlaylists, ...favoritePlaylists].map((playlist) => (
                   <div key={playlist.id} className="playlist-item">
                     <div className="playlist-info">
                       <h4>{playlist.name}</h4>
                       <p className="platform">{playlist.platform}</p>
                       {playlist.description && <p className="description">{playlist.description}</p>}
-                      {playlist.trackCount && <span className="track-count">{playlist.trackCount} tracks</span>}
+                      {playlist.trackCount && <span className="track-count">{playlist.trackCount}</span>}
                     </div>
                     <div className="playlist-actions">
                       <button 

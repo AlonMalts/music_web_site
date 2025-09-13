@@ -2,12 +2,14 @@
   padding: 2rem;
   max-width: 1400px;
   margin: 0 auto;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .music-library h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 2rem;
 }
 
@@ -19,24 +21,26 @@
 }
 
 .library-column {
-  background: #f8f9fa;
+  background: #111111;
   border-radius: 15px;
   padding: 2rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #333333;
 }
 
 .library-column:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
 }
 
 .library-column h3 {
   font-size: 1.8rem;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 1.5rem;
   text-align: center;
-  border-bottom: 3px solid #667eea;
+  border-bottom: 3px solid #ffffff;
   padding-bottom: 0.5rem;
 }
 
@@ -52,12 +56,13 @@
 }
 
 .release-item, .playlist-item {
-  background: white;
+  background: #000000;
   border-radius: 10px;
   padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid #ffffff;
+  border: 1px solid #333333;
   margin-bottom: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -67,7 +72,8 @@
 
 .release-item:hover, .playlist-item:hover {
   transform: translateX(5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
 }
 
 /* Song Header */
@@ -86,14 +92,14 @@
 
 .song-title {
   font-size: 1.4rem;
-  color: #333;
+  color: #ffffff;
   margin: 0 0 0.3rem 0;
   font-weight: 600;
   text-align: left;
 }
 
 .song-artist {
-  color: #666;
+  color: #cccccc;
   font-size: 1rem;
   margin: 0 0 0.5rem 0;
   text-align: left;
@@ -107,21 +113,22 @@
 
 .genre, .year, .track-count {
   display: inline-block;
-  background: #e3f2fd;
-  color: #1976d2;
+  background: #333333;
+  color: #ffffff;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;
+  border: 1px solid #666666;
 }
 
 .year {
-  background: #f3e5f5;
-  color: #7b1fa2;
+  background: #555555;
+  color: #ffffff;
 }
 
 .track-count {
-  background: #e8f5e8;
-  color: #388e3c;
+  background: #777777;
+  color: #ffffff;
 }
 
 /* Streaming Platform Buttons */
@@ -265,7 +272,7 @@
 .empty-state {
   text-align: center;
   padding: 3rem 2rem;
-  color: #666;
+  color: #cccccc;
 }
 
 .empty-state p {
@@ -275,7 +282,7 @@
 
 .help-text {
   font-size: 0.9rem !important;
-  color: #999 !important;
+  color: #999999 !important;
   font-style: italic;
 }
 

@@ -1,8 +1,9 @@
 .workscreen {
   padding: 16px;
-  background-color: #fff;
-  color: #333;
+  background-color: #000000;
+  color: #ffffff;
   text-align: center;
+  min-height: calc(100vh - 200px);
 }
 
 .workscreen h2 {

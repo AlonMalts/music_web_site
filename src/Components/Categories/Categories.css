@@ -3,18 +3,21 @@
     justify-content: center;
     gap: 12px;
     padding: 16px;
-    background-color: #f9f9f9;
+    background-color: #000000;
+    border-bottom: 1px solid #333333;
   }
   
   .category-button {
     padding: 8px 16px;
-    border: none;
-    background-color: #1e3a8a;
+    border: 2px solid #ffffff;
+    background-color: #000000;
     color: white;
     cursor: pointer;
     border-radius: 4px;
+    transition: all 0.3s ease;
   }
   
   .category-button:hover {
-    background-color: #3b82f6;
+    background-color: #ffffff;
+    color: #000000;
   }

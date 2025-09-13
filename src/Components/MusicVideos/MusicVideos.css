@@ -2,11 +2,13 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .music-videos h2 {
   text-align: center;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 30px;
   font-size: 2.5rem;
 }
@@ -19,26 +21,29 @@
 }
 
 .video-item {
-  background: #fff;
+  background: #111111;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #333333;
 }
 
 .video-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
 }
 
 .video-thumbnail {
   position: relative;
   height: 200px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #333333 0%, #666666 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  border-bottom: 1px solid #555555;
 }
 
 .video-placeholder {
@@ -65,7 +70,7 @@
 
 .video-name {
   margin: 0 0 10px 0;
-  color: #333;
+  color: #ffffff;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -73,18 +78,20 @@
 .video-details {
   display: flex;
   justify-content: space-between;
-  color: #666;
+  color: #cccccc;
   font-size: 0.9rem;
 }
 
 .video-size {
-  background: #f0f0f0;
+  background: #333333;
   padding: 4px 8px;
   border-radius: 4px;
+  color: #ffffff;
+  border: 1px solid #555555;
 }
 
 .video-date {
-  color: #888;
+  color: #999999;
 }
 
 .video-actions {
@@ -97,30 +104,24 @@
 .play-btn, .drive-btn {
   flex: 1;
   padding: 10px 15px;
-  border: none;
+  border: 2px solid #ffffff;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s ease;
-}
-
-.play-btn {
-  background: #4CAF50;
-  color: white;
+  background: #000000;
+  color: #ffffff;
 }
 
 .play-btn:hover {
-  background: #45a049;
+  background: #ffffff;
+  color: #000000;
   transform: translateY(-2px);
 }
 
-.drive-btn {
-  background: #4285f4;
-  color: white;
-}
-
 .drive-btn:hover {
-  background: #3367d6;
+  background: #ffffff;
+  color: #000000;
   transform: translateY(-2px);
 }
 
@@ -131,7 +132,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,7 +141,7 @@
 }
 
 .video-modal-content {
-  background: white;
+  background: #111111;
   border-radius: 12px;
   padding: 20px;
   max-width: 800px;
@@ -148,15 +149,17 @@
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
+  border: 2px solid #ffffff;
+  color: #ffffff;
 }
 
 .close-btn {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: #ff4444;
+  background: #000000;
   color: white;
-  border: none;
+  border: 2px solid #ffffff;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -165,11 +168,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .close-btn:hover {
-  background: #cc0000;
+  background: #ffffff;
+  color: #000000;
 }
 
 .video-modal-content h3 {
@@ -193,9 +197,10 @@
 .video-placeholder-modal {
   padding: 40px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #333333 0%, #666666 100%);
   color: white;
   border-radius: 8px;
+  border: 1px solid #555555;
 }
 
 .video-info-modal h4 {
@@ -268,30 +273,33 @@
 .videos-info {
   text-align: center;
   padding: 20px;
-  background: #f8f9fa;
+  background: #111111;
   border-radius: 8px;
   margin-top: 20px;
+  border: 1px solid #333333;
 }
 
 .info-text {
   margin: 0 0 10px 0;
-  color: #333;
+  color: #ffffff;
   font-size: 1.1rem;
 }
 
 .info-text a {
-  color: #4285f4;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease;
 }
 
 .info-text a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid #ffffff;
 }
 
 .help-text {
   margin: 0;
-  color: #666;
+  color: #cccccc;
   font-size: 0.9rem;
 }
 
