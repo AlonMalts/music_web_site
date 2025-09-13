@@ -234,6 +234,7 @@
 .play-controls {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   margin-top: 0.5rem;
   width: 100%;
@@ -241,24 +242,27 @@
 
 .play-btn {
   padding: 0.6rem 1.2rem;
-  border: none;
+  border: 2px solid #ffffff;
   border-radius: 25px;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: #000000;
+  color: #ffffff;
   min-width: 120px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1;
 }
 
 .play-btn:hover {
+  background: #ffffff;
+  color: #000000;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
 .audio-player-container {
@@ -269,12 +273,40 @@
   border: 1px solid #333333;
 }
 
+.audio-controls-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .audio-controls {
-  width: 100%;
+  flex: 1;
   height: 40px;
   border-radius: 20px;
   background: #000000;
   border: 2px solid #ffffff;
+}
+
+.stop-btn {
+  background: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.stop-btn:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: scale(1.1);
 }
 
 .release-actions, .playlist-actions {

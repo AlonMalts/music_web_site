@@ -74,6 +74,12 @@ const Releases = () => {
     setIsPlaying(true);
   };
 
+  const stopSong = () => {
+    setCurrentSong(null);
+    setPlayingSongId(null);
+    setIsPlaying(false);
+  };
+
   const openStreamingPlatform = (platform, songTitle, artist) => {
     const searchQuery = encodeURIComponent(`${songTitle} ${artist}`);
     let url = '';
@@ -154,38 +160,49 @@ const Releases = () => {
                     
                     {/* Bottom Row: Play Controls */}
                     <div className="play-controls">
-                      <button 
-                        className="play-btn"
-                        onClick={() => playSong(release.downloadUrl, release.id)}
-                      >
-                        {playingSongId === release.id && isPlaying ? '⏸️ Pause' : '▶️ Play'}
-                      </button>
+                      {!(playingSongId === release.id && currentSong) && (
+                        <button 
+                          className="play-btn"
+                          onClick={() => playSong(release.downloadUrl, release.id)}
+                        >
+                          Play
+                        </button>
+                      )}
                       
                       {playingSongId === release.id && currentSong && (
                         <div className="audio-player-container">
-                          <audio 
-                            ref={(audio) => {
-                              if (audio) {
-                                if (isPlaying) {
-                                  audio.play();
-                                } else {
-                                  audio.pause();
+                          <div className="audio-controls-wrapper">
+                            <audio 
+                              ref={(audio) => {
+                                if (audio) {
+                                  if (isPlaying) {
+                                    audio.play();
+                                  } else {
+                                    audio.pause();
+                                  }
                                 }
-                              }
-                            }}
-                            controls 
-                            className="audio-controls"
-                            onError={(e) => {
-                              console.error('Audio error:', e);
-                            }}
-                            onPlay={() => setIsPlaying(true)}
-                            onPause={() => setIsPlaying(false)}
-                          >
-                            <source src={currentSong} type="audio/mpeg" />
-                            <source src={currentSong} type="audio/mp3" />
-                            <source src={currentSong} type="audio/wav" />
-                            Your browser does not support the audio element.
-                          </audio>
+                              }}
+                              controls 
+                              className="audio-controls"
+                              onError={(e) => {
+                                console.error('Audio error:', e);
+                              }}
+                              onPlay={() => setIsPlaying(true)}
+                              onPause={() => setIsPlaying(false)}
+                            >
+                              <source src={currentSong} type="audio/mpeg" />
+                              <source src={currentSong} type="audio/mp3" />
+                              <source src={currentSong} type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                            <button 
+                              className="stop-btn"
+                              onClick={stopSong}
+                              title="Stop and hide player"
+                            >
+                              ✕
+                            </button>
+                          </div>
                         </div>
                       )}
                     </div>

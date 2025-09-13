@@ -17,7 +17,7 @@ const WorkScreen = ({ selectedCategory, onCategoryChange }) => {
         return <MusicVideos />;
       case "Music Lessons":
         return <Lessons />;
-      case "About":
+      case "About me":
         return <About />;
       default:
         return <Home onCategoryChange={onCategoryChange} />;

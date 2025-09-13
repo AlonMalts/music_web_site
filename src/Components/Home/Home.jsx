@@ -35,7 +35,7 @@ const Home = ({ onCategoryChange }) => {
           <p>Learn guitar, music theory, and composition with personalized lessons.</p>
         </div>
         
-        <div className="feature-card" onClick={() => handleCategoryClick("About")}>
+        <div className="feature-card" onClick={() => handleCategoryClick("About me")}>
           <h3>👨‍🎤 About me</h3>
           <p>Learn about my musical journey and background.</p>
         </div>
