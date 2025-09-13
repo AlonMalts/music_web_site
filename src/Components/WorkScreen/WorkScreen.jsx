@@ -6,11 +6,11 @@ import About from "../About/About";
 import Lessons from "../Lessons/Lessons";
 import MusicVideos from "../MusicVideos/MusicVideos";
 
-const WorkScreen = ({ selectedCategory }) => {
+const WorkScreen = ({ selectedCategory, onCategoryChange }) => {
   const renderContent = () => {
     switch (selectedCategory) {
       case "Home":
-        return <Home />;
+        return <Home onCategoryChange={onCategoryChange} />;
       case "Music library":
         return <Releases />;
       case "Music videos":
@@ -20,7 +20,7 @@ const WorkScreen = ({ selectedCategory }) => {
       case "About":
         return <About />;
       default:
-        return <Home />;
+        return <Home onCategoryChange={onCategoryChange} />;
     }
   };
 

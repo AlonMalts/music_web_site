@@ -1,5 +1,5 @@
 .home {
-  padding: 1rem;
+  padding: 4px 8px;
   max-width: 1200px;
   margin: 0 auto;
   background-color: #000000;
@@ -10,13 +10,13 @@
 
 .welcome-section {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .welcome-section h1 {
   font-size: 2.5rem;
   color: #ffffff;
-  margin-bottom: 1rem;
+  margin: 0 0 0.5rem 0;
 }
 
 .intro-text {
@@ -42,6 +42,7 @@
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #333333;
+  cursor: pointer;
 }
 
 .feature-card:hover {

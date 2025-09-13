@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-left">
         <p>Contact us: alon@music.com</p>
-        <p>This website powered by sammie homeless</p>
+        <p>This website powered by Sammie Homeless</p>
       </div>
       
       <div className="footer-center">

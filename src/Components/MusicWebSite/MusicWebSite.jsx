@@ -14,7 +14,7 @@ const MusicWebSite = () => {
   return (
     <div className="music-website">
       <Header onCategoryChange={handleCategoryChange} />
-      <WorkScreen selectedCategory={selectedCategory} />
+      <WorkScreen selectedCategory={selectedCategory} onCategoryChange={handleCategoryChange} />
       <Footer />
     </div>
   );
