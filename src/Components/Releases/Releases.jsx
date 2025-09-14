@@ -80,25 +80,19 @@ const Releases = () => {
     setIsPlaying(false);
   };
 
-  const openStreamingPlatform = (platform, songTitle, artist) => {
-    const searchQuery = encodeURIComponent(`${songTitle} ${artist}`);
-    let url = '';
-    
-    switch (platform) {
-      case 'youtube':
-        url = `https://music.youtube.com/search?q=${searchQuery}`;
-        break;
-      case 'spotify':
-        url = `https://open.spotify.com/search/${searchQuery}`;
-        break;
-      case 'apple':
-        url = `https://music.apple.com/search?term=${searchQuery}`;
-        break;
-      default:
-        return;
+  const formatReleaseDate = (dateString) => {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear().toString().slice(-2);
+    return `${day}.${month}.${year}`;
+  };
+
+  const openStreamingLink = (url) => {
+    if (url) {
+      window.open(url, '_blank');
     }
-    
-    window.open(url, '_blank');
   };
 
   const openPlaylist = (playlistUrl) => {
@@ -127,34 +121,39 @@ const Releases = () => {
                     <div className="song-header">
                       <div className="song-info">
                         <h4 className="song-title">{release.title}</h4>
-                        <p className="song-artist">{release.artist}</p>
+                        <p className="song-album">{release.album}</p>
                         <div className="song-tags">
-                          {release.genre && <span className="genre">{release.genre}</span>}
-                          {release.year && <span className="year">{release.year}</span>}
+                          {release.releaseDate && <span className="release-date">{formatReleaseDate(release.releaseDate)}</span>}
                         </div>
                       </div>
                       <div className="streaming-links">
-                        <button 
-                          className="stream-btn youtube-btn"
-                          onClick={() => openStreamingPlatform('youtube', release.title, release.artist)}
-                          title="Search on YouTube Music"
-                        >
-                          🎵
-                        </button>
-                        <button 
-                          className="stream-btn spotify-btn"
-                          onClick={() => openStreamingPlatform('spotify', release.title, release.artist)}
-                          title="Search on Spotify"
-                        >
-                          🎧
-                        </button>
-                        <button 
-                          className="stream-btn apple-btn"
-                          onClick={() => openStreamingPlatform('apple', release.title, release.artist)}
-                          title="Search on Apple Music"
-                        >
-                          🍎
-                        </button>
+                        {release.youtubeLink && (
+                          <button 
+                            className="stream-btn youtube-btn"
+                            onClick={() => openStreamingLink(release.youtubeLink)}
+                            title="Open on YouTube"
+                          >
+                            🎵
+                          </button>
+                        )}
+                        {release.spotifyLink && (
+                          <button 
+                            className="stream-btn spotify-btn"
+                            onClick={() => openStreamingLink(release.spotifyLink)}
+                            title="Open on Spotify"
+                          >
+                            🎧
+                          </button>
+                        )}
+                        {release.appleMusicLink && (
+                          <button 
+                            className="stream-btn apple-btn"
+                            onClick={() => openStreamingLink(release.appleMusicLink)}
+                            title="Open on Apple Music"
+                          >
+                            🍎
+                          </button>
+                        )}
                       </div>
                     </div>
                     

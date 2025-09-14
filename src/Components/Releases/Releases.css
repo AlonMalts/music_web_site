@@ -146,7 +146,7 @@
   text-align: left;
 }
 
-.song-artist {
+.song-album {
   color: #cccccc;
   font-size: 1rem;
   margin: 0 0 0.5rem 0;
@@ -159,7 +159,7 @@
   justify-content: flex-start;
 }
 
-.genre, .year, .track-count {
+.genre, .year, .track-count, .release-date {
   display: inline-block;
   background: #333333;
   color: #ffffff;
@@ -172,6 +172,12 @@
 .year {
   background: #555555;
   color: #ffffff;
+}
+
+.release-date {
+  background: #444444;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 .track-count {
