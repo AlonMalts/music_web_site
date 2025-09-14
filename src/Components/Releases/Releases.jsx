@@ -120,7 +120,10 @@ const Releases = () => {
                     {/* Top Row: Song Info and Streaming Links */}
                     <div className="song-header">
                       <div className="song-info">
-                        <h4 className="song-title">{release.title}</h4>
+                        <h4 className="song-title">
+                          {release.title}
+                          {release.artist && <span className="song-artist"> by {release.artist}</span>}
+                        </h4>
                         <p className="song-album">{release.album}</p>
                         <div className="song-tags">
                           {release.releaseDate && <span className="release-date">{formatReleaseDate(release.releaseDate)}</span>}
