@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-left">
-        <p>This website powered by Sammie Homeless</p>
-        <p>Contact us: sammiehomeless@gmail.com</p>
+        <p>This website powered by</p>
+        <p><a href="https://sammiehomeless.com" target="_blank" rel="noopener noreferrer">Sammie Homeless</a></p>
       </div>
 
       <div className="footer-center">
