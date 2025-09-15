@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 
-const Header = ({ onCategoryChange }) => {
+const Header = ({ onCategoryChange, selectedCategory }) => {
   const handleLogoClick = () => {
     if (onCategoryChange) {
       onCategoryChange("Home");
@@ -15,15 +15,26 @@ const Header = ({ onCategoryChange }) => {
       <h1 className="logo" onClick={handleLogoClick}>
         Alon Malts Music
       </h1>
+      
+      {selectedCategory !== "Home" && (
+        <div className="selected-category-display">
+          <span className="selected-category-text">
+            {selectedCategory}
+          </span>
+        </div>
+      )}
+      
       <nav className="header-nav">
         {categories.map((category) => (
-          <button
-            key={category}
-            className="header-category-button"
-            onClick={() => onCategoryChange(category)}
-          >
-            {category}
-          </button>
+          selectedCategory !== category && (
+            <button
+              key={category}
+              className="header-category-button"
+              onClick={() => onCategoryChange(category)}
+            >
+              {category}
+            </button>
+          )
         ))}
       </nav>
     </header>
