@@ -5,7 +5,6 @@ const Lessons = () => {
   return (
     <div className="lessons">
       <div className="intro-section">
-        <h2>Private Music Lessons</h2>
         <p>
           Whether you're a beginner or an experienced musician looking to refine
           your skills, I offer personalized music lessons tailored to your goals

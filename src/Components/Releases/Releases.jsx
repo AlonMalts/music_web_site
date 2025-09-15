@@ -100,9 +100,7 @@ const Releases = () => {
   };
 
   return (
-    <div className="music-library">
-      <h2>Music Library</h2>
-      
+    <div className="music-library">      
       <div className="library-container">
         {/* Personal Releases Column */}
         <div className="library-column">

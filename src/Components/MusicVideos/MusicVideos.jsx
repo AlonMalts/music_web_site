@@ -57,9 +57,7 @@ const MusicVideos = () => {
   };
 
   return (
-    <div className="music-videos">
-      <h2>🎬 Music Videos</h2>
-      
+    <div className="music-videos">      
       <div className="videos-container">
         {musicVideos.map((video) => (
           <div key={video.id} className="video-item">
