@@ -62,24 +62,6 @@
   line-height: 1.5;
 }
 
-.cta-section {
-  text-align: center;
-  background: #111111;
-  color: white;
-  padding: 3rem;
-  border-radius: 15px;
-  border: 2px solid #ffffff;
-}
-
-.cta-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.cta-section p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
 
 @media (max-width: 768px) {
   .home {
@@ -103,7 +85,4 @@
     padding: 1.5rem;
   }
   
-  .cta-section {
-    padding: 2rem;
-  }
 }

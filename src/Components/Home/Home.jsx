@@ -41,10 +41,6 @@ const Home = ({ onCategoryChange }) => {
         </div>
       </div>
       
-      <div className="cta-section">
-        <h2>Ready to Explore?</h2>
-        <p>Click on any category above to get started, or use the navigation menu at the top.</p>
-      </div>
     </div>
   );
 };
