@@ -35,6 +35,11 @@ const Home = ({ onCategoryChange }) => {
           <p>Learn guitar, music theory, and composition with personalized lessons.</p>
         </div>
         
+        <div className="feature-card" onClick={() => handleCategoryClick("Collaborations")}>
+          <h3>🤝 Collaborations</h3>
+          <p>Order performances, soundtracks for movies/games, and collaborative music projects.</p>
+        </div>
+        
         <div className="feature-card" onClick={() => handleCategoryClick("About me")}>
           <h3>👨‍🎤 About me</h3>
           <p>Learn about my musical journey and background.</p>

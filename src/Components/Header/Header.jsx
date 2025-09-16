@@ -8,7 +8,7 @@ const Header = ({ onCategoryChange, selectedCategory }) => {
     }
   };
 
-  const categories = ["Music library", "Music videos", "Music Lessons", "About me"];
+  const categories = ["Music library", "Music videos", "Music Lessons", "Collaborations", "About me"];
 
   return (
     <header className="header">

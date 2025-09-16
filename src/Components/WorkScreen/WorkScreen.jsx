@@ -5,6 +5,7 @@ import Releases from "../Releases/Releases";
 import About from "../About/About";
 import Lessons from "../Lessons/Lessons";
 import MusicVideos from "../MusicVideos/MusicVideos";
+import Collaborations from "../Collaborations/Collaborations";
 
 const WorkScreen = ({ selectedCategory, onCategoryChange }) => {
   const renderContent = () => {
@@ -17,6 +18,8 @@ const WorkScreen = ({ selectedCategory, onCategoryChange }) => {
         return <MusicVideos />;
       case "Music Lessons":
         return <Lessons />;
+      case "Collaborations":
+        return <Collaborations />;
       case "About me":
         return <About />;
       default:
