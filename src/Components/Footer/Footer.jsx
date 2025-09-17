@@ -18,6 +18,9 @@ const Footer = () => {
         <div className="social-links">
           <a href="#instagram">Instagram</a> | <a href="#youtube">Youtube</a> | <a href="#tiktok">Tick Tock</a>
         </div>
+        <div className="support-links">
+          <a href="https://patreon.com/alonmalts" target="_blank" rel="noopener noreferrer">Support on Patreon</a>
+        </div>
       </div>
     </footer>
   );

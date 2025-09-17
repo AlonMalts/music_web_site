@@ -21,7 +21,7 @@ const Header = ({ onCategoryChange, selectedCategory }) => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const categories = ["Music library", "Music videos", "Music Lessons", "Collaborations", "About me"];
+  const categories = ["Music library", "Music videos", "About me"];
 
   return (
     <header className="header">
