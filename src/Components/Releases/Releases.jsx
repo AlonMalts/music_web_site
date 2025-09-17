@@ -120,40 +120,43 @@ const Releases = () => {
                       <div className="song-info">
                         <h4 className="song-title">
                           {release.title}
-                          {release.artist && <span className="song-artist"> by {release.artist}</span>}
                         </h4>
                         <p className="song-album">{release.album}</p>
-                        <div className="song-tags">
-                          {release.releaseDate && <span className="release-date">{formatReleaseDate(release.releaseDate)}</span>}
-                        </div>
                       </div>
                       <div className="streaming-links">
-                        {release.youtubeLink && (
-                          <button 
-                            className="stream-btn youtube-btn"
-                            onClick={() => openStreamingLink(release.youtubeLink)}
-                            title="Open on YouTube"
-                          >
-                            🎵
-                          </button>
-                        )}
-                        {release.spotifyLink && (
-                          <button 
-                            className="stream-btn spotify-btn"
-                            onClick={() => openStreamingLink(release.spotifyLink)}
-                            title="Open on Spotify"
-                          >
-                            🎧
-                          </button>
-                        )}
-                        {release.appleMusicLink && (
-                          <button 
-                            className="stream-btn apple-btn"
-                            onClick={() => openStreamingLink(release.appleMusicLink)}
-                            title="Open on Apple Music"
-                          >
-                            🍎
-                          </button>
+                        <div className="streaming-buttons">
+                          {release.youtubeLink && (
+                            <button 
+                              className="stream-btn youtube-btn"
+                              onClick={() => openStreamingLink(release.youtubeLink)}
+                              title="Open on YouTube"
+                            >
+                              🎵
+                            </button>
+                          )}
+                          {release.spotifyLink && (
+                            <button 
+                              className="stream-btn spotify-btn"
+                              onClick={() => openStreamingLink(release.spotifyLink)}
+                              title="Open on Spotify"
+                            >
+                              🎧
+                            </button>
+                          )}
+                          {release.appleMusicLink && (
+                            <button 
+                              className="stream-btn apple-btn"
+                              onClick={() => openStreamingLink(release.appleMusicLink)}
+                              title="Open on Apple Music"
+                            >
+                              🍎
+                            </button>
+                          )}
+                        </div>
+                        {release.releaseDate && (
+                          <div className="release-date-container">
+                            <span className="release-date">{formatReleaseDate(release.releaseDate)}</span>
+                          </div>
                         )}
                       </div>
                     </div>
@@ -230,7 +233,6 @@ const Releases = () => {
                       <h4>{playlist.name}</h4>
                       <p className="platform">{playlist.platform}</p>
                       {playlist.description && <p className="description">{playlist.description}</p>}
-                      {playlist.trackCount && <span className="track-count">{playlist.trackCount}</span>}
                     </div>
                     <div className="playlist-actions">
                       <button 
@@ -239,6 +241,11 @@ const Releases = () => {
                       >
                         🎵 Open Playlist
                       </button>
+                      {playlist.trackCount && (
+                        <div className="track-count-container">
+                          <span className="track-count">{playlist.trackCount}</span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}

@@ -4,48 +4,40 @@ import "./MusicVideos.css";
 const MusicVideos = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  // Music videos data from your Google Drive folder
+  // Music videos data with YouTube embeds
   const musicVideos = [
     {
       id: 1,
       title: "Begin again (live Rimon 02.07)",
-      filename: "Begin again (live Rimon 02.07).MOV",
-      size: "74.2 MB",
+      youtubeId: "YOUR_YOUTUBE_VIDEO_ID_1", // Replace with actual YouTube video ID
       date: "Jul 2, 2024",
-      driveUrl: "https://drive.google.com/drive/folders/1db8Z3EjcQ2ZLipL0Szmb93hFo10CyECP",
-      embedUrl: "https://drive.google.com/file/d/1db8Z3EjcQ2ZLipL0Szmb93hFo10CyECP/preview"
+      description: "Live performance at Rimon School"
     },
     {
       id: 2,
       title: "Blusette",
-      filename: "blusette.mov",
-      size: "80 MB",
+      youtubeId: "YOUR_YOUTUBE_VIDEO_ID_2", // Replace with actual YouTube video ID
       date: "Feb 27, 2024",
-      driveUrl: "https://drive.google.com/drive/folders/1db8Z3EjcQ2ZLipL0Szmb93hFo10CyECP",
-      embedUrl: "https://drive.google.com/file/d/1db8Z3EjcQ2ZLipL0Szmb93hFo10CyECP/preview"
+      description: "Jazz guitar performance"
     },
     {
       id: 3,
       title: "Ptitsi (2013)",
-      filename: "Ptitsi (2013).mov",
-      size: "248.6 MB",
+      youtubeId: "YOUR_YOUTUBE_VIDEO_ID_3", // Replace with actual YouTube video ID
       date: "Apr 27, 2024",
-      driveUrl: "https://drive.google.com/drive/folders/1db8Z3EjcQ2ZLipL0Szmb93hFo10CyECP",
-      embedUrl: "https://drive.google.com/file/d/1db8Z3EjcQ2ZLipL0Szmb93hFo10CyECP/preview"
+      description: "Early performance from 2013"
     },
     {
       id: 4,
       title: "So tired (live Rimon 02.07)",
-      filename: "So tired (live Rimon 02.07.MOV",
-      size: "66.9 MB",
+      youtubeId: "YOUR_YOUTUBE_VIDEO_ID_4", // Replace with actual YouTube video ID
       date: "Jul 2, 2024",
-      driveUrl: "https://drive.google.com/drive/folders/1db8Z3EjcQ2ZLipL0Szmb93hFo10CyECP",
-      embedUrl: "https://drive.google.com/file/d/1db8Z3EjcQ2ZLipL0Szmb93hFo10CyECP/preview"
+      description: "Live performance at Rimon School"
     }
   ];
 
-  const openVideoInDrive = (video) => {
-    window.open(video.driveUrl, '_blank');
+  const openVideoOnYouTube = (video) => {
+    window.open(`https://www.youtube.com/watch?v=${video.youtubeId}`, '_blank');
   };
 
   const playVideo = (video) => {
@@ -61,17 +53,22 @@ const MusicVideos = () => {
       <div className="videos-container">
         {musicVideos.map((video) => (
           <div key={video.id} className="video-item">
-            <div className="video-thumbnail">
-              <div className="video-placeholder">
-                <span className="play-icon">▶️</span>
-                <p className="video-title">{video.title}</p>
-              </div>
+            <div className="video-embed">
+              <iframe
+                width="100%"
+                height="200"
+                src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                title={video.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
             
             <div className="video-info">
               <h3 className="video-name">{video.title}</h3>
+              <p className="video-description">{video.description}</p>
               <div className="video-details">
-                <span className="video-size">{video.size}</span>
                 <span className="video-date">{video.date}</span>
               </div>
             </div>
@@ -80,16 +77,16 @@ const MusicVideos = () => {
               <button 
                 className="play-btn"
                 onClick={() => playVideo(video)}
-                title="Play video"
+                title="Play video in modal"
               >
-                ▶️ Play
+                ▶️ Play Fullscreen
               </button>
               <button 
-                className="drive-btn"
-                onClick={() => openVideoInDrive(video)}
-                title="Open in Google Drive"
+                className="youtube-btn"
+                onClick={() => openVideoOnYouTube(video)}
+                title="Open on YouTube"
               >
-                📁 Open in Drive
+                📺 Open on YouTube
               </button>
             </div>
           </div>
@@ -103,27 +100,22 @@ const MusicVideos = () => {
             <button className="close-btn" onClick={closeVideo}>✕</button>
             <h3>{selectedVideo.title}</h3>
             <div className="video-player">
-              <div className="video-placeholder-modal">
-                <div className="video-info-modal">
-                  <h4>🎬 {selectedVideo.title}</h4>
-                  <p className="video-details-modal">
-                    <span>📁 {selectedVideo.filename}</span>
-                    <span>💾 {selectedVideo.size}</span>
-                    <span>📅 {selectedVideo.date}</span>
-                  </p>
-                  <p className="video-instruction">
-                    To watch this video, click "Open in Google Drive" below. 
-                    The video will open in a new tab where you can play it directly.
-                  </p>
-                </div>
-              </div>
+              <iframe
+                width="100%"
+                height="400"
+                src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}`}
+                title={selectedVideo.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
             <div className="video-modal-actions">
               <button 
-                className="drive-btn primary"
-                onClick={() => openVideoInDrive(selectedVideo)}
+                className="youtube-btn primary"
+                onClick={() => openVideoOnYouTube(selectedVideo)}
               >
-                📁 Open in Google Drive
+                📺 Open on YouTube
               </button>
               <button 
                 className="close-modal-btn"
@@ -138,10 +130,10 @@ const MusicVideos = () => {
 
       <div className="videos-info">
         <p className="info-text">
-          📁 All videos are stored in your <a href="https://drive.google.com/drive/folders/1db8Z3EjcQ2ZLipL0Szmb93hFo10CyECP" target="_blank" rel="noopener noreferrer">Google Drive folder</a>
+          📺 All videos are embedded from YouTube for the best viewing experience
         </p>
         <p className="help-text">
-          Click "Play" to watch videos directly, or "Open in Drive" to view them in Google Drive
+          Click "Play Fullscreen" to watch in a larger modal, or "Open on YouTube" to view on YouTube
         </p>
       </div>
     </div>
