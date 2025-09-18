@@ -80,14 +80,6 @@ const Releases = () => {
     setIsPlaying(false);
   };
 
-  const formatReleaseDate = (dateString) => {
-    if (!dateString) return '';
-    const date = new Date(dateString);
-    const day = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const year = date.getFullYear().toString().slice(-2);
-    return `${day}.${month}.${year}`;
-  };
 
   const openStreamingLink = (url) => {
     if (url) {
@@ -131,7 +123,7 @@ const Releases = () => {
                               onClick={() => openStreamingLink(release.youtubeLink)}
                               title="Open on YouTube"
                             >
-                              🎵
+                              ▶
                             </button>
                           )}
                           {release.spotifyLink && (
@@ -153,11 +145,6 @@ const Releases = () => {
                             </button>
                           )}
                         </div>
-                        {release.releaseDate && (
-                          <div className="release-date-container">
-                            <span className="release-date">{formatReleaseDate(release.releaseDate)}</span>
-                          </div>
-                        )}
                       </div>
                     </div>
                     
@@ -186,6 +173,7 @@ const Releases = () => {
                                 }
                               }}
                               controls 
+                              controlsList="nodownload"
                               className="audio-controls"
                               onError={(e) => {
                                 console.error('Audio error:', e);
