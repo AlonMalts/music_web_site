@@ -47,7 +47,6 @@ const MusicVideos = () => {
     return (
       <div className="music-videos">
         <div className="loading-container">
-          <h2>Music videos</h2>
           <p>Loading videos...</p>
         </div>
       </div>
@@ -56,7 +55,6 @@ const MusicVideos = () => {
 
   return (
     <div className="music-videos">
-      <h2>Music videos</h2>
       <div className="videos-container">
         {musicVideos.length === 0 ? (
           <div className="empty-state">

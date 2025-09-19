@@ -101,7 +101,6 @@ const Releases = () => {
             {personalReleases.length === 0 ? (
               <div className="empty-state">
                 <p>No personal releases found.</p>
-                <p className="help-text">Upload your music to Firebase Storage to see them here.</p>
               </div>
             ) : (
               <div className="releases-list">
@@ -218,22 +217,24 @@ const Releases = () => {
                 {[...defaultPlaylists, ...favoritePlaylists].map((playlist) => (
                   <div key={playlist.id} className="playlist-item">
                     <div className="playlist-info">
-                      <h4>{playlist.name}</h4>
-                      <p className="platform">{playlist.platform}</p>
+                      <div className="playlist-platform-info">
+                        <h4>{playlist.name}</h4>
+                        {playlist.trackCount && (
+                          <div className="track-count-container">
+                            <span className="track-count">{playlist.trackCount}</span>
+                          </div>
+                        )}
+                      </div>
+                      <div className="playlist-actions">
+                        <p className="platform">{playlist.platform}</p>
+                        <button 
+                          className="release-open-btn"
+                          onClick={() => openPlaylist(playlist.url)}
+                        >
+                          🎵 Open Playlist
+                        </button>
+                      </div>
                       {playlist.description && <p className="description">{playlist.description}</p>}
-                    </div>
-                    <div className="playlist-actions">
-                      <button 
-                        className="release-open-btn"
-                        onClick={() => openPlaylist(playlist.url)}
-                      >
-                        🎵 Open Playlist
-                      </button>
-                      {playlist.trackCount && (
-                        <div className="track-count-container">
-                          <span className="track-count">{playlist.trackCount}</span>
-                        </div>
-                      )}
                     </div>
                   </div>
                 ))}

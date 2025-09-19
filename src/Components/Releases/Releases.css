@@ -48,24 +48,24 @@
 
 /* Personal Releases Styles */
 .releases-section, .playlists-section {
-  min-height: 400px;
+  min-height: 200px;
 }
 
 .releases-list, .playlists-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .release-item {
   background: #000000;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.8rem;
   box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   border-left: 4px solid #ffffff;
   border: 1px solid #333333;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -74,39 +74,70 @@
 .playlist-item {
   background: #000000;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.8rem;
   box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   border-left: 4px solid #ffffff;
   border: 1px solid #333333;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   text-align: left;
 }
 
 .playlist-info {
-  flex: 1;
-  margin-right: 1rem;
+  margin-right: 0;
+  margin-bottom: 0.3rem;
 }
 
 .playlist-info h4 {
-  margin: 0 0 0.3rem 0;
+  margin: 0 0 0.2rem 0;
   font-size: 1.1rem;
   color: #ffffff;
   font-weight: 600;
 }
 
-.playlist-info .platform {
-  margin: 0 0 0.3rem 0;
+.playlist-platform-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+
+.playlist-platform-info .platform {
   font-size: 0.85rem;
   color: #cccccc;
+  margin: 0;
+  flex: 1;
+}
+
+.track-count-container {
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.playlist-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  width: 100%;
+  margin-top: 0.2rem;
+}
+
+.playlist-actions .platform {
+  font-size: 0.85rem;
+  color: #cccccc;
+  margin: 0;
+  flex: 1;
+  text-align: left;
 }
 
 .playlist-info .description {
-  margin: 0 0 0.5rem 0;
+  margin: 0.3rem 0 0 0;
   font-size: 0.8rem;
   color: #999999;
   line-height: 1.3;
@@ -128,7 +159,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   width: 100%;
 }
 
@@ -206,8 +237,8 @@
 }
 
 .stream-btn {
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   border: none;
   border-radius: 50%;
   font-size: 1rem;
@@ -216,6 +247,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .youtube-btn, .spotify-btn, .apple-btn {
@@ -233,14 +267,35 @@
   border-radius: 50% !important;
 }
 
+/* Specific button alignment fixes */
+.youtube-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.spotify-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.9rem;
+}
+
+.apple-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.9rem;
+}
+
 
 /* Play Controls */
 .play-controls {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 0.2rem;
+  gap: 0.8rem;
+  margin-top: 0.1rem;
   width: 100%;
 }
 
@@ -321,12 +376,14 @@
 }
 
 .playlist-actions {
-  margin-top: 0;
+  margin-top: 0.2rem;
   flex-shrink: 0;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  width: 100%;
 }
 
 .release-open-btn {
@@ -342,6 +399,7 @@
   text-align: center;
   background: #000000;
   color: #ffffff;
+  flex-shrink: 0;
 }
 
 .release-open-btn:hover {
@@ -415,72 +473,297 @@
 
 @media (max-width: 768px) {
   .music-library {
-    padding: 1rem;
+    padding: 0.5rem;
   }
   
   .music-library h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .library-column {
+    padding: 1rem;
+    margin-bottom: 1rem;
   }
   
   .library-column h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
   }
   
   .release-item, .playlist-item {
-    padding: 1rem;
-  }
-  
-  .release-actions, .playlist-actions {
-    flex-direction: column;
-  }
-  
-  .release-play-btn, .release-open-btn {
-    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
   }
   
   .song-header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
   }
   
   .song-info {
     margin-right: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .song-title {
+    font-size: 1rem;
+    line-height: 1.1;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .song-album {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .streaming-links {
     margin-left: 0;
-    align-self: flex-start;
+    align-self: center;
+    flex-shrink: 0;
+  }
+  
+  .streaming-buttons {
+    display: flex;
+    gap: 0.3rem;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    margin-top: 0;
   }
   
   .stream-btn {
-    width: 35px;
-    height: 35px;
+    width: 44px;
+    height: 44px;
     font-size: 1rem;
+    flex-shrink: 0;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1;
+    text-align: center !important;
+    vertical-align: middle !important;
+  }
+  
+  /* Mobile-specific button alignment - ensure perfect centering */
+  .youtube-btn, .spotify-btn, .apple-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    line-height: 1 !important;
+    font-size: 1rem !important;
   }
   
   .play-controls {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.8rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 0.2rem;
+  }
+  
+  .song-album {
+    flex: 1;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .release-play-btn {
-    width: 100%;
-    min-width: auto;
+    width: auto;
+    min-width: 80px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    height: 32px;
+    flex-shrink: 0;
   }
   
   .playlist-item {
     flex-direction: column;
     align-items: stretch;
+    padding: 1rem;
   }
   
   .playlist-info {
     margin-right: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .playlist-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .playlist-platform-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .playlist-platform-info .platform {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+  }
+  
+  .track-count-container {
+    margin-top: 0;
+    flex-shrink: 0;
   }
   
   .playlist-actions {
-    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  .playlist-actions .platform {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+  }
+  
+  .playlist-info .description {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .release-open-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    height: 32px;
+    flex-shrink: 0;
+  }
+  
+  .track-count {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.4rem;
+  }
+}
+
+/* Additional mobile fixes for very small screens */
+@media (max-width: 480px) {
+  .music-library {
+    padding: 0.3rem;
+  }
+  
+  .library-column {
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .library-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .release-item, .playlist-item {
+    padding: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .song-title {
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+  
+  .song-album {
+    font-size: 0.75rem;
+    margin-bottom: 0;
+  }
+  
+  .stream-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    line-height: 1 !important;
+  }
+  
+  .youtube-btn, .spotify-btn, .apple-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    line-height: 1 !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .release-play-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    height: 32px;
+  }
+  
+  .playlist-item {
+    padding: 0.8rem;
+  }
+  
+  .playlist-info h4 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .playlist-platform-info {
+    margin-bottom: 0.4rem;
+  }
+  
+  .playlist-actions {
+    margin-top: 0.4rem;
+    gap: 0.6rem;
+  }
+  
+  .playlist-info .platform {
+    font-size: 0.8rem;
+  }
+  
+  .playlist-info .description {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .release-open-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    height: 28px;
   }
 }
