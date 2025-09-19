@@ -15,6 +15,34 @@
   font-size: 2.5rem;
 }
 
+.loading-container {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #ffffff;
+}
+
+.loading-container p {
+  font-size: 1.1rem;
+  color: #cccccc;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #cccccc;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.help-text {
+  font-size: 0.9rem !important;
+  color: #999999 !important;
+  font-style: italic;
+}
+
 .videos-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
