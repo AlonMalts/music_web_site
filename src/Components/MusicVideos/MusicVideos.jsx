@@ -67,22 +67,18 @@ const MusicVideos = () => {
             
             <div className="video-info">
               <h3 className="video-name">{video.title}</h3>
-              <p className="video-description">{video.description}</p>
-              <div className="video-details">
-                <span className="video-date">{video.date}</span>
-              </div>
             </div>
             
             <div className="video-actions">
               <button 
-                className="play-btn"
+                className="video-play-btn"
                 onClick={() => playVideo(video)}
                 title="Play video in modal"
               >
                 ▶️ Play Fullscreen
               </button>
               <button 
-                className="youtube-btn"
+                className="video-youtube-btn"
                 onClick={() => openVideoOnYouTube(video)}
                 title="Open on YouTube"
               >

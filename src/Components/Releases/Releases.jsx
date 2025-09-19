@@ -152,7 +152,7 @@ const Releases = () => {
                     <div className="play-controls">
                       {!(playingSongId === release.id && currentSong) && (
                         <button 
-                          className="play-btn"
+                          className="release-play-btn"
                           onClick={() => playSong(release.downloadUrl, release.id)}
                         >
                           Play
@@ -224,7 +224,7 @@ const Releases = () => {
                     </div>
                     <div className="playlist-actions">
                       <button 
-                        className="open-btn"
+                        className="release-open-btn"
                         onClick={() => openPlaylist(playlist.url)}
                       >
                         🎵 Open Playlist
