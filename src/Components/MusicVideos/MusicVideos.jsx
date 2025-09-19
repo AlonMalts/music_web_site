@@ -55,50 +55,80 @@ const MusicVideos = () => {
 
   return (
     <div className="music-videos">
-      <div className="videos-container">
-        {musicVideos.length === 0 ? (
-          <div className="empty-state">
-            <p>No music videos found.</p>
-            <p className="help-text">Add videos to your Firebase collection to see them here.</p>
-          </div>
-        ) : (
-          musicVideos.map((video) => (
-            <div key={video.id} className="video-item">
-              <div className="video-embed">
-                <iframe
-                  width="100%"
-                  height="200"
-                  src={`https://www.youtube.com/embed/${video.youtubeId}`}
-                  title={video.title}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-
-              <div className="video-info">
-                <h3 className="video-name">{video.title}</h3>
-              </div>
-
-              <div className="video-actions">
-                <button
-                  className="video-play-btn"
-                  onClick={() => playVideo(video)}
-                  title="Play video in modal"
-                >
-                  ▶️ Play Fullscreen
-                </button>
-                <button
-                  className="video-youtube-btn"
-                  onClick={() => openVideoOnYouTube(video)}
-                  title="Open on YouTube"
-                >
-                  📺 Open on YouTube
-                </button>
-              </div>
+      <div className="music-videos-layout">
+        {/* Left Sidebar - YouTube Channel Info */}
+        <div className="channel-sidebar">
+          <div className="channel-info">
+            <h2>🎬 My YouTube Channel</h2>
+            <p className="channel-description">
+              Welcome to my music channel! Here you'll find original compositions, 
+              covers, live performances, and behind-the-scenes content. I create 
+              music across various genres including jazz, blues, funk, and contemporary styles.
+            </p>
+            <div className="channel-stats">
+              <p><strong>Content:</strong> Original music, covers, tutorials</p>
+              <p><strong>Genres:</strong> Jazz, Blues, Funk, Contemporary</p>
+              <p><strong>Updates:</strong> New videos every week</p>
             </div>
-          ))
-        )}
+            <a 
+              href="https://www.youtube.com/@alonmalts" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="youtube-channel-btn"
+            >
+              📺 Visit My YouTube Channel
+            </a>
+          </div>
+        </div>
+
+        {/* Right Content - Videos (2/3 of screen) */}
+        <div className="videos-main-content">
+          <div className="videos-container">
+            {musicVideos.length === 0 ? (
+              <div className="empty-state">
+                <p>No music videos found.</p>
+                <p className="help-text">Add videos to your Firebase collection to see them here.</p>
+              </div>
+            ) : (
+              musicVideos.map((video) => (
+                <div key={video.id} className="video-item">
+                  <div className="video-embed">
+                    <iframe
+                      width="100%"
+                      height="200"
+                      src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                      title={video.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+
+                  <div className="video-info">
+                    <h3 className="video-name">{video.title}</h3>
+                  </div>
+
+                  <div className="video-actions">
+                    <button
+                      className="video-play-btn"
+                      onClick={() => playVideo(video)}
+                      title="Play video in modal"
+                    >
+                      ▶️ Play Fullscreen
+                    </button>
+                    <button
+                      className="video-youtube-btn"
+                      onClick={() => openVideoOnYouTube(video)}
+                      title="Open on YouTube"
+                    >
+                      📺 Open on YouTube
+                    </button>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+        </div>
       </div>
 
       {/* Video Modal */}

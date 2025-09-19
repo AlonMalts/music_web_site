@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="footer-right">
           <p>Follow me on social media:</p>
           <div className="social-links">
-            <a href="#instagram">Instagram</a> | <a href="#youtube">Youtube</a> | <a href="#tiktok">Tick Tock</a>
+            <a href="#instagram">Instagram</a> | <a href="https://soundcloud.com/alonmalts" target="_blank" rel="noopener noreferrer">SoundCloud</a> | <a href="#tiktok">Tick Tock</a>
           </div>
           <div className="support-links">
             <a href="https://patreon.com/alonmalts" target="_blank" rel="noopener noreferrer">Support on Patreon</a>
@@ -44,7 +44,7 @@ const Footer = () => {
           <div className="footer-right">
             <p>Follow me on social media:</p>
             <div className="social-links">
-              <a href="#instagram">Instagram</a> | <a href="#youtube">Youtube</a> | <a href="#tiktok">Tick Tock</a>
+              <a href="#instagram">Instagram</a> | <a href="https://soundcloud.com/alonmalts" target="_blank" rel="noopener noreferrer">SoundCloud</a> | <a href="#tiktok">Tick Tock</a>
             </div>
           </div>
         </div>
