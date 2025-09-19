@@ -1,4 +1,3 @@
-import './App.css';
 import MusicWebSite from "../src/Components/MusicWebSite/MusicWebSite"
 
 function App() {

@@ -41,6 +41,10 @@
     border-bottom: 1px solid #ffffff;
   }
   
+  .intro-section, .lessons-section, .details-section, .contact-section {
+    margin-bottom: 20px;
+  }
+  
   .contact-section a {
     font-weight: bold;
   }

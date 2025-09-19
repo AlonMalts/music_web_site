@@ -77,34 +77,6 @@
   height: 100%;
 }
 
-.video-thumbnail {
-  position: relative;
-  height: 200px;
-  background: linear-gradient(135deg, #333333 0%, #666666 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-bottom: 1px solid #555555;
-}
-
-.video-placeholder {
-  text-align: center;
-  color: white;
-}
-
-.play-icon {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.video-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0;
-  padding: 0 10px;
-}
 
 .video-info {
   padding: 20px 15px 15px 15px;
@@ -235,43 +207,6 @@
   border-radius: 8px;
 }
 
-.video-placeholder-modal {
-  padding: 40px 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #333333 0%, #666666 100%);
-  color: white;
-  border-radius: 8px;
-  border: 1px solid #555555;
-}
-
-.video-info-modal h4 {
-  margin: 0 0 20px 0;
-  font-size: 1.5rem;
-  color: white;
-}
-
-.video-details-modal {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin: 0 0 20px 0;
-  font-size: 1rem;
-}
-
-.video-details-modal span {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 8px 12px;
-  border-radius: 6px;
-  display: inline-block;
-  margin: 2px;
-}
-
-.video-instruction {
-  margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  opacity: 0.9;
-}
 
 .video-modal-actions {
   display: flex;
@@ -280,16 +215,20 @@
   flex-wrap: wrap;
 }
 
-.drive-btn.primary {
-  background: #4285f4;
+.youtube-btn.primary {
+  background: #ff0000;
   color: white;
   padding: 12px 24px;
   font-size: 1.1rem;
   font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.drive-btn.primary:hover {
-  background: #3367d6;
+.youtube-btn.primary:hover {
+  background: #cc0000;
   transform: translateY(-2px);
 }
 
@@ -310,39 +249,7 @@
   transform: translateY(-2px);
 }
 
-/* Videos Info */
-.videos-info {
-  text-align: center;
-  padding: 20px;
-  background: #111111;
-  border-radius: 8px;
-  margin-top: 20px;
-  border: 1px solid #333333;
-}
 
-.info-text {
-  margin: 0 0 10px 0;
-  color: #ffffff;
-  font-size: 1.1rem;
-}
-
-.info-text a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  border-bottom: 1px solid transparent;
-  transition: border-bottom 0.3s ease;
-}
-
-.info-text a:hover {
-  border-bottom: 1px solid #ffffff;
-}
-
-.help-text {
-  margin: 0;
-  color: #cccccc;
-  font-size: 0.9rem;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -363,9 +270,6 @@
     flex-direction: column;
   }
   
-  .play-btn, .drive-btn {
-    flex: none;
-  }
   
   .video-modal-content {
     margin: 10px;
@@ -376,45 +280,19 @@
     height: 250px;
   }
   
-  .video-placeholder-modal {
-    padding: 30px 15px;
-  }
-  
-  .video-info-modal h4 {
-    font-size: 1.3rem;
-  }
-  
-  .video-details-modal {
-    font-size: 0.9rem;
-  }
-  
-  .video-instruction {
-    font-size: 1rem;
-  }
   
   .video-modal-actions {
     flex-direction: column;
   }
   
-  .drive-btn.primary, .close-modal-btn {
+  .youtube-btn.primary, .close-modal-btn {
     padding: 10px 20px;
     font-size: 1rem;
   }
+  
 }
 
 @media (max-width: 480px) {
-  .video-thumbnail {
-    height: 150px;
-  }
-  
-  .play-icon {
-    font-size: 2rem;
-  }
-  
-  .video-title {
-    font-size: 1rem;
-  }
-  
   .video-name {
     font-size: 1.1rem;
   }
