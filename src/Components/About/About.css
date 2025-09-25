@@ -18,36 +18,55 @@
     color: #ffffff;
   }
   
-  .bio-section, .summary-section, .links-section {
-    margin-bottom: 20px;
+  .about-me-section, .education-section, .instruments-section, .social-links-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    border: 1px solid #333333;
   }
   
-  .bio-section p, .summary-section ul, .links-section ul {
-    margin: 10px 0;
+  .about-me-section p, .education-section ul, .instruments-section ul, .social-links-section ul {
+    margin: 15px 0;
   }
   
-  .summary-section ul {
+  .education-section ul, .instruments-section ul {
     padding-left: 20px;
     list-style-type: disc;
   }
   
-  .links-section ul {
+  .education-section li, .instruments-section li {
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+  
+  .social-links-section ul {
     padding-left: 0;
     list-style-type: none;
   }
   
-  .links-section li {
-    margin: 5px 0;
+  .social-links-section li {
+    margin: 8px 0;
   }
   
-  .links-section a {
+  .social-links-section a {
     color: #ffffff;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.3s ease;
+    padding: 5px 0;
+    display: inline-block;
   }
   
-  .links-section a:hover {
+  .social-links-section a:hover {
     border-bottom: 1px solid #ffffff;
+  }
+  
+  .about h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #333333;
+    padding-bottom: 8px;
   }
   

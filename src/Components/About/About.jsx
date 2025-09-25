@@ -4,52 +4,47 @@ import "./About.css";
 const About = () => {
   return (
     <div className="about">
-      <div className="bio-section">
-        <h2>Biography</h2>
+      <div className="about-me-section">
+        <h2>About Me</h2>
         <p>
           I was born in Kfar Saba, Israel, and raised in Russia, moving between
           cities like Chelyabinsk, Moscow, and St. Petersburg. My love for music
           started early, with piano, choir, guitar, and singing lessons filling
-          my childhood.
-        </p>
-        <p>
-          At the age of twelve, my passion for guitar led me to enroll in a
-          music school for children, where I dedicated three years to classical
-          guitar.
-        </p>
-        <p>
-          Then, I went to university to study sound engineering for mass events,
-          learning audio engineering, sound design, piano, music theory,
-          harmony, and more.
-        </p>
-        <p>
-          Now, I am studying at the Rimon School of Jazz and Contemporary Music
-          in Ramat Hasharon, focusing on jazz, blues, and funk guitar.
+          my childhood. I am a passionate musician and sound designer with a
+          diverse background spanning classical training, modern production
+          techniques, and jazz education.
         </p>
       </div>
-      <div className="summary-section">
-        <h2>Summary</h2>
+
+      <div className="education-section">
+        <h2>Education</h2>
         <ul>
           <li>
-            <strong>Early Musical Journey (ages 8-12):</strong> Piano (2 years),
-            Choir (3 years), Guitar (2 years), Vocal (2 years)
+            <strong>Children Music School</strong> - Studied classical guitar for 3 years (ages 12-14)
           </li>
           <li>
-            <strong>Music School (ages 12-14):</strong> Studied classical guitar
-            for 3 years
+            <strong>University for Sound Design</strong> - Sound engineering for mass events, 
+            learning audio engineering, sound design, piano, music theory, and harmony (ages 17-18)
           </li>
           <li>
-            <strong>University (ages 17-18):</strong> Explored sound engineering
-            for mass events for 1 year
-          </li>
-          <li>
-            <strong>Current (Age 27):</strong> Studying guitar at Rimon School
-            of Jazz and Contemporary Music
+            <strong>Rimon School of Jazz and Contemporary Music</strong> - Currently studying 
+            jazz, blues, and rock guitar in Ramat Hasharon, with courses in songwriting, 
+            music theory, and sound production
           </li>
         </ul>
       </div>
-      <div className="links-section">
-        <h2>Links</h2>
+
+      <div className="instruments-section">
+        <h2>Instruments</h2>
+        <ul>
+          <li><strong>Guitar</strong> - Classical and electric guitar with focus on jazz, blues, and funk</li>
+          <li><strong>Piano</strong> - Classical piano training and contemporary playing</li>
+          <li><strong>Ableton Push</strong> - Electronic music production and live performance</li>
+        </ul>
+      </div>
+
+      <div className="social-links-section">
+        <h2>Social Media & Links</h2>
         <ul>
           <li>
             <a
