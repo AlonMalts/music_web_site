@@ -24,7 +24,7 @@ const About = () => {
               <strong>Children Music School</strong> - Studied classical guitar for 3 years (ages 12-14)
             </li>
             <li>
-              <strong>University for Sound Design</strong> - Sound engineering for mass events, 
+              <strong>University for Sound Engeniering</strong> - Sound engineering for mass events, 
               learning audio engineering, sound design, piano, music theory, and harmony (ages 17-18)
             </li>
             <li>
