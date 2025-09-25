@@ -5,14 +5,11 @@ const About = () => {
   return (
     <div className="about">
       <div className="about-me-section">
-        <h2>About Me</h2>
+        <h2>Hey, I'm Alon.</h2>
         <p>
-          I was born in Kfar Saba, Israel, and raised in Russia, moving between
-          cities like Chelyabinsk, Moscow, and St. Petersburg. My love for music
-          started early, with piano, choir, guitar, and singing lessons filling
-          my childhood. I am a passionate musician and sound designer with a
-          diverse background spanning classical training, modern production
-          techniques, and jazz education.
+          I was born in Kfar Saba, Israel, and grew up in Russia, moving between Chelyabinsk, Moscow, and St. Petersburg. Music has been with me since childhood — first the piano, then guitar and singing, with endless lessons, bands, and experiments shaping who I am.<br />
+          Over the years, I've explored many sides of sound: classical training, jazz studies, modern production, and songwriting. Each world gave me something new — discipline, creativity, and the drive to push boundaries.
+          And of course, there's always rock and punk — the raw energy, chaos, and freedom that keep everything alive and real. Because music, for me, is about breaking walls as much as building them.
         </p>
       </div>
 
@@ -21,15 +18,15 @@ const About = () => {
           <h2>Education</h2>
           <ul>
             <li>
-              <strong>Children Music School</strong> - Studied classical guitar for 3 years (ages 12-14)
+              <strong>Children Music School</strong> - Studied classical guitar for 3 years
             </li>
             <li>
-              <strong>University for Sound Engeniering</strong> - Sound engineering for mass events, 
-              learning audio engineering, sound design, piano, music theory, and harmony (ages 17-18)
+              <strong>University for Sound Engineering</strong> - Sound engineering for mass events,
+              learning audio engineering, sound design, piano, music theory, and harmony
             </li>
             <li>
-              <strong>Rimon School of Jazz and Contemporary Music</strong> - Currently studying 
-              jazz, blues, and rock guitar in Ramat Hasharon, with courses in songwriting, 
+              <strong>Rimon School of Jazz and Contemporary Music</strong> - Currently studying
+              jazz, blues, and rock guitar in Ramat Hasharon, with courses in songwriting,
               music theory, and sound production
             </li>
           </ul>
