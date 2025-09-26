@@ -26,6 +26,11 @@ const Header = ({ onCategoryChange, selectedCategory }) => {
   return (
     <header className="header">
       <h1 className="logo" onClick={handleLogoClick}>
+        <img 
+          src="/favicon.ico" 
+          alt="Alon Malts Music Logo" 
+          className="logo-image"
+        />
         Alon Malts Music
       </h1>
       

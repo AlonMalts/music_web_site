@@ -24,6 +24,15 @@
   align-items: center;
   height: 100%;
   white-space: nowrap;
+  gap: 8px;
+}
+
+.logo-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .logo:hover {
@@ -187,6 +196,11 @@
     word-break: break-word;
   }
   
+  .logo-image {
+    width: 28px;
+    height: 28px;
+  }
+  
   .mobile-menu-toggle {
     display: flex;
   }
@@ -252,6 +266,11 @@
     word-break: break-word;
   }
   
+  .logo-image {
+    width: 24px;
+    height: 24px;
+  }
+  
   .header-nav {
     top: 55px;
     padding: 15px;
@@ -291,6 +310,11 @@
     max-width: 90px;
     white-space: normal;
     word-break: break-word;
+  }
+  
+  .logo-image {
+    width: 20px;
+    height: 20px;
   }
   
   .header-nav {
