@@ -253,7 +253,7 @@
 }
 
 .audio-player-container {
-  flex: 1;
+  width: 100%;
   background: #111111;
   border-radius: 10px;
   padding: 0.8rem;
@@ -264,10 +264,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  width: 100%;
 }
 
 .audio-controls {
   flex: 1;
+  min-width: 0;
   height: 40px;
   border-radius: 20px;
   background: #000000;
@@ -359,14 +361,6 @@
   font-size: 1.5rem;
 }
 
-.audio-controls {
-  width: 100%;
-  max-width: 500px;
-  height: 50px;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-}
 
 .audio-url {
   font-size: 0.8rem;
