@@ -5,22 +5,10 @@ import "./Releases.css";
 
 const Releases = () => {
   const [personalReleases, setPersonalReleases] = useState([]);
-  const [favoritePlaylists, setFavoritePlaylists] = useState([]);
   const [currentSong, setCurrentSong] = useState(null);
   const [playingSongId, setPlayingSongId] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // Default playlists including the user's Spotify playlist
-  const defaultPlaylists = [
-    {
-      id: "chill-dnd",
-      name: "Chill dnd",
-      platform: "Spotify",
-      description: "A relaxing playlist perfect for D&D sessions and chill moments",
-      trackCount: "12 tracks",
-      url: "https://open.spotify.com/playlist/1X4KVtzbCksJXdfE3ziOL9?si=579624e39b46481d"
-    }
-  ];
 
   useEffect(() => {
     const fetchPersonalReleases = async () => {
@@ -39,24 +27,7 @@ const Releases = () => {
       }
     };
 
-    const fetchFavoritePlaylists = async () => {
-      try {
-        const playlistsCollection = collection(db, "favoritePlaylists");
-        const playlistsSnapshot = await getDocs(playlistsCollection);
-
-        const playlistsData = playlistsSnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-
-        setFavoritePlaylists(playlistsData);
-      } catch (error) {
-        console.error("Error fetching favorite playlists:", error);
-      }
-    };
-
     fetchPersonalReleases();
-    fetchFavoritePlaylists();
   }, []);
 
   const playSong = (downloadUrl, songId) => {
@@ -87,9 +58,6 @@ const Releases = () => {
     }
   };
 
-  const openPlaylist = (playlistUrl) => {
-    window.open(playlistUrl, '_blank');
-  };
 
   return (
     <div className="music-library">      
@@ -203,45 +171,6 @@ const Releases = () => {
           </div>
         </div>
 
-        {/* Favorite Playlists Column */}
-        <div className="library-column">
-          <h3>🎶 My Playlists</h3>
-          <div className="playlists-section">
-            {[...defaultPlaylists, ...favoritePlaylists].length === 0 ? (
-              <div className="empty-state">
-                <p>No favorite playlists added yet.</p>
-                <p className="help-text">Add your favorite playlists from Spotify, Apple Music, etc.</p>
-              </div>
-            ) : (
-              <div className="playlists-list">
-                {[...defaultPlaylists, ...favoritePlaylists].map((playlist) => (
-                  <div key={playlist.id} className="playlist-item">
-                    <div className="playlist-info">
-                      <div className="playlist-platform-info">
-                        <h4>{playlist.name}</h4>
-                        {playlist.trackCount && (
-                          <div className="track-count-container">
-                            <span className="track-count">{playlist.trackCount}</span>
-                          </div>
-                        )}
-                      </div>
-                      <div className="playlist-actions">
-                        <p className="platform">{playlist.platform}</p>
-                        <button 
-                          className="release-open-btn"
-                          onClick={() => openPlaylist(playlist.url)}
-                        >
-                          🎵 Open Playlist
-                        </button>
-                      </div>
-                      {playlist.description && <p className="description">{playlist.description}</p>}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
       </div>
 
     </div>
