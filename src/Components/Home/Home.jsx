@@ -36,20 +36,7 @@ const Home = ({ onCategoryChange }) => {
           <p>Learn about my musical journey and background.</p>
         </div>
       </div>
-      
-      <div className="support-section">
-        <h2>Support My Music</h2>
-        <p>Help me continue creating music by supporting me on Patreon</p>
-        <a 
-          href="https://patreon.com/alonmalts" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="patreon-button"
-        >
-          🎵 Support on Patreon
-        </a>
-      </div>
-      
+     
     </div>
   );
 };

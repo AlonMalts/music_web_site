@@ -19,9 +19,6 @@ const Footer = () => {
           <div className="social-links">
             <a href="#instagram">Instagram</a> | <a href="https://soundcloud.com/alonmalts" target="_blank" rel="noopener noreferrer">SoundCloud</a> | <a href="#tiktok">Tick Tock</a>
           </div>
-          <div className="support-links">
-            <a href="https://patreon.com/alonmalts" target="_blank" rel="noopener noreferrer">Support on Patreon</a>
-          </div>
         </div>
       </div>
 
@@ -30,11 +27,7 @@ const Footer = () => {
           <div className="footer-left">
             <p>This website powered by <a href="https://sammiehomeless.com" target="_blank" rel="noopener noreferrer">Sammie Homeless</a></p>
           </div>
-          <div className="footer-right">
-            <div className="support-links">
-              <a href="https://patreon.com/alonmalts" target="_blank" rel="noopener noreferrer">Support on Patreon</a>
-            </div>
-          </div>
+          <div className="footer-right" />
         </div>
 
         <div className="footer-bottom-row">
